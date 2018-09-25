@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#46e4c2</color>
+    <!--color name="colorPrimary">#3F51B5</color-->
+    <color name="colorPrimaryDark">#3fdfbd</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="circle">#000</color>
+    <color name="activecircle">#fff</color>
+    <color name="background">#000</color>
+
+    <color name="white">#fff</color>
+
+    <color name="green">#0A0</color>
+    <color name="red">#C00</color>
+    <color name="colorPrimaryT">#A046e4c2</color>
+    <color name="whiteT">#8fff</color>
+    <color name="blackT">#8000</color>
+</resources>

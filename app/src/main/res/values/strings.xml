@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">New York Times</string>
+    <string name="app_title">NY Times Most Popular</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_exit">Exit</string>
+    <string name="action_browser">Browser</string>
+
+    <string name="loading">LOADING</string>
+    <string name="exit">Are you sure you want to exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>
