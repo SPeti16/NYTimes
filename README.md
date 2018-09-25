@@ -4,7 +4,7 @@ Mobile Application Test Exercise
   # Leírás
 
 
-  # Telepítése
+  # Telepítés
 
 
-  # Használata
+  # Használat
