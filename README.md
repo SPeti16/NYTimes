@@ -1,10 +1,10 @@
 # NYTimes
 Mobile Application Test Exercise
 
-#Leírás
+# Leírás
 
 
-#Telepítése
+# Telepítése
 
 
-#Használata
+# Használata
