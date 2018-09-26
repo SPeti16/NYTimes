@@ -3,13 +3,13 @@ Mobile Application Test Exercise
 
   # Leírás
 
-  Ez egy olyan alkalmazás, ami a New York Tims oldalán lévő napi, heti vagy havi TOP20-as cikkeket rendezi egy listába. Ez a lista a cikk címét, szerzőjét és megjelenési dátumát tartalmazza.
-  Az alkalmazásban a cikkek angol nyelvűek, de az alkalmazásban szereplő információk angol vagy magyar nyelven jelenhetnek meg. (Alapesetben angol, de ha a telefonon a nyelv magyar, akkor a magyarul jeleníti meg.)
+  - Ez egy olyan alkalmazás, ami a New York Tims oldalán lévő napi, heti vagy havi TOP20-as cikkeket rendezi egy listába. Ez a lista a cikk címét, szerzőjét és megjelenési dátumát tartalmazza.
+  -Az alkalmazásban a cikkek angol nyelvűek, de az alkalmazásban szereplő információk angol vagy magyar nyelven jelenhetnek meg. (Alapesetben angol, de ha a telefonon a nyelv magyar, akkor a magyarul jeleníti meg.)
 
   # Telepítés
 
-  Az applikáció telepítéséhez az APK könyvtárban található NYTimes.apk fájlt kell feltenni az androidos telefonra. A telefonon keresse meg ezt a fájlt majd kattintson rá és folytassa a leírtak alapján a telepítést.
-  Az alkalmazást az api level 21-től (Android 5.0, LOLLIPOP) lehet használni.
+  - Az applikáció telepítéséhez az APK könyvtárban található NYTimes.apk fájlt kell feltenni az androidos telefonra. A telefonon keresse meg ezt a fájlt majd kattintson rá és folytassa a leírtak alapján a telepítést.
+  - Az alkalmazást az api level 21-től (Android 5.0, LOLLIPOP) lehet használni.
 
   # Használat
 
