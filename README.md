@@ -14,10 +14,10 @@ Mobile Application Test Exercise
   # Használat
 
 - Indítás után egy betöltő felület jelenik meg, ami jelzi hogy az adatok letöltése hol tart jelenleg.
--Az adatok letöltése után megjelenik egy új felület amin a cikkek láthatóak egy listában. Ebben a listában a napi 20 legolvasottabb cikk jelenik meg. 
+- Az adatok letöltése után megjelenik egy új felület amin a cikkek láthatóak egy listában. Ebben a listában a napi 20 legolvasottabb cikk jelenik meg. 
 Bal oldalon lévő oldalsávon válthat hogy a napi, heti vagy havi Top20-as hír listája jelenjen meg.
 A cikkek között lehet keresni. Ezt a nagyító ikonra kattintva teheti meg. A program a címnél, a szerzők nevénél vagy a dátumnál keresi a megadott szót. Figyeljen a kis és nagy betűkre.
 Kilépéshez kattintson a visszalépés nyílra vagy a jobb felső sarokban lévő három pontra majd a kilépésre. Egy ellenőrző kérdést tesz fel amire igennel válaszolva kilép a programból.
 A hír olvasásához kattintson a cikkhez tartozó nyílra.
--A cikk egy új felületen olvasható. Amennyiben a hír nem megfelelően jelenik meg akkor a jobb felső sarokban lévő három pontra kattintva a böngésző felirattal lehet a cikket megnyitni a telefon böngészőjével.
+- A cikk egy új felületen olvasható. Amennyiben a hír nem megfelelően jelenik meg akkor a jobb felső sarokban lévő három pontra kattintva a böngésző felirattal lehet a cikket megnyitni a telefon böngészőjével.
 A listához a visszalépés nyílra kattintva térhet vissza.
