@@ -11,6 +11,7 @@ import android.webkit.WebView;
 
 /**
  * Created by Peti on 2018. 09. 23..
+ * Itt olvasható a teljes cikk.
  */
 
 public class fragmentWeb extends Fragment {

@@ -1,6 +1,5 @@
 package com.work.wup.nytimes;
 
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -9,13 +8,13 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Created by Peti on 2018. 09. 22..
+ * Ebben az osztályban hozom létre a cikkekhez tartozó adatokból a megjelenítendő felületet.
  */
 
 public class shortNews {
@@ -34,13 +33,11 @@ public class shortNews {
 
         LinearLayout data = new LinearLayout(v.getContext());
         data.setOrientation(LinearLayout.VERTICAL);
-        data.setLayoutParams(new LinearLayout.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT,1));//ActionBar.LayoutParams.WRAP_CONTENT,1));
-        //data.setBackgroundColor(Color.CYAN);
+        data.setLayoutParams(new LinearLayout.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT,1));
 
             TextView title =new TextView(v.getContext());
             title.setLayoutParams(new LinearLayout.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
             title.setTypeface(null, Typeface.BOLD);
-            //title.setTextColor(Color.BLACK);
             textColor(title,counter);
             title.setTextSize(16);
             title.setText(article.getTitle());
@@ -48,7 +45,6 @@ public class shortNews {
             TextView byline =new TextView(v.getContext());
             byline.setLayoutParams(new LinearLayout.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
             byline.setTypeface(null, Typeface.ITALIC);
-            //byline.setTextColor(Color.BLACK);
             textColor(byline,counter);
             byline.setText(article.getByline());
 
@@ -62,7 +58,6 @@ public class shortNews {
                 TextView dateText = new TextView(v.getContext());
                 dateText.setLayoutParams(new LinearLayout.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT));
                 dateText.setText(article.getDate());
-                //dateText.setTextColor(Color.BLACK);
                 textColor(dateText,counter);
 
                 ImageView dateImage = new ImageView(v.getContext());
@@ -79,8 +74,6 @@ public class shortNews {
 
         CircleImageView image = new CircleImageView(v.getContext());
         image.setLayoutParams(piece);
-        //image.setImageResource(R.drawable.ic_1);
-        //image.setBackgroundColor(Color.GREEN);
         image.setImageBitmap(article.getImage());
 
         ImageView arrow = new ImageView(v.getContext());
@@ -94,19 +87,14 @@ public class shortNews {
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Fragment megnyítása  (String)view.getTag()
                 Bundle bundle = new Bundle();
                 bundle.putString("url", (String)view.getTag());
                 ((MainActivity)view.getContext()).sendDataFragment(fragmentWeb.class.getName(),new fragmentWeb(),bundle);
             }
         });
-        //arrow.setBackgroundColor(Color.RED);
 
         dateGroup.addView(dateImage);
         dateGroup.addView(dateText);
-
-        //smallData.addView(byline);
-        //smallData.addView(dateGroup);
 
         data.addView(title);
         data.addView(byline);

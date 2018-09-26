@@ -32,6 +32,7 @@
             app:searchBackIcon="@drawable/ic_back"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
+            android:hint="@string/search"
             />
 
          </RelativeLayout>

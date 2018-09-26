@@ -2,17 +2,15 @@ package com.work.wup.nytimes;
 
 import android.graphics.Bitmap;
 
-import java.util.Date;
-
 /**
  * Created by Peti on 2018. 09. 22..
+ * Ez az osztály a Json-ról leszedett adatok tárolására szolgál.
  */
 
 public class Article {
 
     private String title, byline, url, date;
     Bitmap image;
-    //private Date date;
 
     public Article(String t, String b, String u, String d, Bitmap i){
         title=t;

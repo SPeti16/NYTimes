@@ -2,31 +2,25 @@ package com.work.wup.nytimes;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.util.HashMap;
+
+//Ez az activity, a felelős hogy az alkalmazás jól működhessen.
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -37,7 +31,6 @@ public class MainActivity extends AppCompatActivity
     private String KEY ="d571bad2d4a7437b9d2ad0fe02e0d64d";
     private int days=1;
     private News[] news;
-    fragmentDownloadData fragmentDD=null;
     NavigationView navigationView;
     Toolbar toolbar;
     MaterialSearchView searchView;
@@ -112,6 +105,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    //Új fragmentek megnyitására szolgáló metódus.
     public void openFragment(String classname, Fragment fragmentname){
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
@@ -125,20 +119,15 @@ public class MainActivity extends AppCompatActivity
             toolbar.getMenu().findItem(R.id.action_browser).setVisible(true);
             toolbar.getMenu().findItem(R.id.action_search).setVisible(false);
         }
-
-        if(classname.equals(fragmentNews.class.getName())){
-
-        }
-
-
     }
 
-
+    //Erre a fragmentWeb-nek van szüksége, hogy megkaphassa az url-t.
     public void sendDataFragment(String classname, Fragment fragmentname, Bundle bundle){
         fragmentname.setArguments(bundle);
         openFragment(classname, fragmentname);
     }
 
+    //Json adatok letöltésének megkezdése.
     public void startDownload(){
         new GetContacts().execute();
     }
@@ -168,7 +157,6 @@ public class MainActivity extends AppCompatActivity
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    //navigationView.setVisibility(View.VISIBLE);
                     navigationView.getMenu().findItem(R.id.nav_day).setEnabled(true);
                     navigationView.getMenu().findItem(R.id.nav_week).setEnabled(true);
                     navigationView.getMenu().findItem(R.id.nav_month).setEnabled(true);
@@ -179,7 +167,6 @@ public class MainActivity extends AppCompatActivity
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    //navigationView.setVisibility(View.VISIBLE);
                     navigationView.getMenu().findItem(R.id.nav_day).setEnabled(false);
                     navigationView.getMenu().findItem(R.id.nav_week).setEnabled(false);
                     navigationView.getMenu().findItem(R.id.nav_month).setEnabled(false);
@@ -194,7 +181,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         MenuItem item = menu.findItem(R.id.action_search);
         searchView.setMenuItem(item);
@@ -203,12 +189,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_exit) {
             startExit();
             return true;
@@ -225,7 +207,6 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_day) {
@@ -247,23 +228,16 @@ public class MainActivity extends AppCompatActivity
         return news[days].getArticles();
     }
 
+    //A cikk listának a frissítésére szolgál.
     private void refreshNews(){
-        String fragmentName=fragmentManager.findFragmentById(R.id.fragment).getClass().getName();
-        if(fragmentName.equals(fragmentWeb.class.getName())) {
-            onBackPressed();
-        }
-        if(fragmentName.equals(fragmentNews.class.getName())){
             ((fragmentNews)fragmentManager.findFragmentById(R.id.fragment)).refresh();
-        }
     }
 
-
+    //Json adatok letöltése után itt kezdi meg azoknak a feldolgozását.
     private class GetContacts extends AsyncTask<Void, Void, Void> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            //Toast.makeText(MainActivity.this,"Json Data is downloading",Toast.LENGTH_LONG).show();
-
         }
 
         @Override
@@ -291,15 +265,6 @@ public class MainActivity extends AppCompatActivity
 
             return null;
         }
-
-        /*@Override
-        protected void onPostExecute(Void result) {
-            super.onPostExecute(result);
-            adapter = new SimpleAdapter(MainActivity.this, contactList,
-                    R.layout.list_item, new String[]{ "title"},
-                    new int[]{R.id.name});
-
-        }*/
     }
 
 }

@@ -14,6 +14,7 @@ import java.net.URL;
 
 /**
  * Created by Peti on 2018. 09. 21..
+ * Ez az osztály végzi, segíti a Json adatok letöltését.
  */
 
 public class HttpHandler {

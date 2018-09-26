@@ -2,12 +2,12 @@ package com.work.wup.nytimes;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 
 /**
  * Created by Peti on 2018. 09. 23..
+ * Ez egy dialog ami a kilépéshez kér megerősítést.
  */
 
 public class Exit {

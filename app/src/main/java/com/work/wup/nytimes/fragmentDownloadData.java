@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 /**
  * Created by Peti on 2018. 09. 21..
+ * Ez a fragment azt a célt szolgálja, hogy megmutathassa a Json adatok letöltésének állapotát.
  */
 
 public class fragmentDownloadData extends Fragment{
@@ -18,8 +19,6 @@ public class fragmentDownloadData extends Fragment{
     int downloadCounter;
     ProgressBar loading;
     TextView loadingText;
-    TextView loadingDot;
-    //Boolean startFragment=false;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_download_data, container, false);
@@ -27,9 +26,6 @@ public class fragmentDownloadData extends Fragment{
         downloadCounter=0;
         loading=v.findViewById(R.id.loadingBar);
         loadingText=v.findViewById(R.id.loadingText);
-        //loadingDot=v.findViewById(R.id.loadingDot);
-        //loadingDot.setVisibility(View.INVISIBLE);
-        //startFragment=true;
         ((MainActivity)getActivity()).startDownload();
         return v;
     }
@@ -37,11 +33,6 @@ public class fragmentDownloadData extends Fragment{
     public void addDownloadCounter(){
         downloadCounter++;
         loading.setProgress(downloadCounter);
-        /*if(loading.getProgress()%2==1){
-            loadingDot.setVisibility(View.VISIBLE);
-        }else{
-            loadingDot.setVisibility(View.INVISIBLE);
-        }*/
     }
 
 }

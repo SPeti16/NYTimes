@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">New York Times</string>
+    <string name="app_title">NY Times Top20 Cikk</string>
+
+    <string name="navigation_drawer_open">Nyissa meg az oldalsávot</string>
+    <string name="navigation_drawer_close">Zárja be az oldalsávot</string>
+
+    <string name="action_exit">Kilépés</string>
+    <string name="action_browser">Böngésző</string>
+
+    <string name="search">Keresés...</string>
+
+    <string name="day">Napi</string>
+    <string name="week">Heti</string>
+    <string name="month">Havi</string>
+
+    <string name="loading">BETÖLTÉS</string>
+    <string name="exit">Biztos, hogy ki akarsz lépni?</string>
+    <string name="yes">Igen</string>
+    <string name="no">Nem</string>
+</resources>
