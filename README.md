@@ -4,7 +4,7 @@ Mobile Application Test Exercise
   # Leírás
 
   - Ez egy olyan alkalmazás, ami a New York Tims oldalán lévő napi, heti vagy havi TOP20-as cikkeket rendezi egy listába. Ez a lista a cikk címét, szerzőjét és megjelenési dátumát tartalmazza.
-  -Az alkalmazásban a cikkek angol nyelvűek, de az alkalmazásban szereplő információk angol vagy magyar nyelven jelenhetnek meg. (Alapesetben angol, de ha a telefonon a nyelv magyar, akkor a magyarul jeleníti meg.)
+  - Az alkalmazásban a cikkek angol nyelvűek, de az alkalmazásban szereplő információk angol vagy magyar nyelven jelenhetnek meg. (Alapesetben angol, de ha a telefonon a nyelv magyar, akkor a magyarul jeleníti meg.)
 
   # Telepítés
 
